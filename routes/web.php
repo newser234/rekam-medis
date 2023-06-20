@@ -28,7 +28,7 @@ Route::get('/pasien/tambah/', 'PasienController@tambah_pasien')->name('pasien.ta
 
 Route::post('/pasien/tambah/simpan', 'PasienController@simpan_pasien')->name('pasien.simpan')->middleware('auth');
 
-Route::post('/pasien/edit/update/', 'PasienController@update_pasien')->middleware('auth');
+Route::post('/pasien/edit/update/', 'PasienController@update_pasien')->name('pasien.update')->middleware('auth');
 
 Route::delete('/pasien/hapus/{id}','PasienController@hapus_pasien')->name('pasien.destroy')->middleware('auth');
 
